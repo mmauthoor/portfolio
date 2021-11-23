@@ -1,8 +1,14 @@
 nav {
   background-color: #161B22;
   border-right: 2px solid #484F58;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   width: 16rem;
+}
+
+.divider {
+  flex-grow: 1;
 }
 
 a {
@@ -21,6 +27,6 @@ a:hover {
   font-weight: bold;
 }
 
-.divider {
-  flex-grow: 1;
+.icon {
+  margin-right: 0.5rem;
 }

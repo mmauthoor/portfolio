@@ -40,7 +40,7 @@ export default function NavBar() {
 
       <div className='divider' />
 
-      <p>This site was built with <FaReact alt='React' /></p>
+      <p>This site was built with <FaReact /></p>
     </nav>
   );
 }

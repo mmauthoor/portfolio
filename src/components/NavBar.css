@@ -1,0 +1,26 @@
+nav {
+  background-color: #161B22;
+  border-right: 2px solid #484F58;
+  min-height: 100vh;
+  width: 16rem;
+}
+
+a {
+  display: block;
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9C90E8;
+}
+
+.current {
+  background-color: #30363D;
+  font-weight: bold;
+}
+
+.divider {
+  flex-grow: 1;
+}

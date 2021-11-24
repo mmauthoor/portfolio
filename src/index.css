@@ -9,7 +9,6 @@ body {
   background-color: #0D1116;
   color: #C9D1D9;
   margin: 0;
-  min-height: 100vh;
   font-family: 'Outfit', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,6 +20,21 @@ a {
 }
 
 main {
-  min-width: calc(100vw - 16rem);
   padding: 2rem;
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  main {
+    min-height: calc(100vh);
+    min-width: calc(100vw);
+  }
+}
+
+/* Web or other */
+@media only screen and (min-width: 601px) {
+  main {
+    min-height: 100vh;
+    min-width: calc(100vw - 16rem);
+  }
 }

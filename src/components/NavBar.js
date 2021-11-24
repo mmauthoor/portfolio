@@ -15,32 +15,32 @@ export default function NavBar() {
     <nav>
       <Link to='/' className='current'>
         <FaRegAddressCard className='icon' />
-        Profile
+        <p className="label">Profile</p>
       </Link>
 
       <Link to='/projects'>
         <FaCode className='icon' />
-        Projects
+        <p className="label">Projects</p>
       </Link>
 
       <Link to='/experience'>
         <FaBriefcase className='icon' />
-        Experience
+        <p className="label">Experience</p>
       </Link>
 
       <Link to='/education'>
         <FaUniversity className='icon' />
-        Education
+        <p className="label">Education</p>
       </Link>
 
       <Link to='/contact'>
         <FaPhoneAlt className='icon' />
-        Contact
+        <p className="label">Contact</p>
       </Link>
 
       <div className='divider' />
 
-      <p>This site was built with <FaReact /></p>
+      <p className='info'>I built this site with <FaReact /> React</p>
     </nav>
   );
 }

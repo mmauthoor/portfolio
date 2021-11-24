@@ -19,6 +19,7 @@
     "git-info": "echo export default \"{\\\"lastCommit\\\": \\\"$(git log -1 | grep Date:)\\\"}\" > src/_git_commit.js",
     "precommit": "lint-staged",
     "start": "npm run git-info; react-scripts start",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "npm run git-info; react-scripts build",
     "test": "react-scripts test",

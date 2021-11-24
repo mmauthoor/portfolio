@@ -45,7 +45,7 @@ const NavBar = () => {
     <nav>
       { tabs.map(renderTab) }
       <div className='divider web' />
-      <p className='info web'>Built with React</p>
+      <p className='info web'>Built with Rails and React</p>
       <p className='info web'>Last updated { lastUpdated }</p>
     </nav>
   );

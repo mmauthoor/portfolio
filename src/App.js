@@ -9,7 +9,6 @@ import Education from './views/Education';
 import Contact from './views/Contact';
 
 function App() {
-
   return (
     <div className="App">
 

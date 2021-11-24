@@ -10,6 +10,7 @@ import {
 
 import NavTab from './NavTab';
 import './NavBar.css';
+import GitCommit from '../_git_commit';
 
 const NavBar = () => {
   const [ activeTab, setActiveTab ] = useState('/');
@@ -35,11 +36,17 @@ const NavBar = () => {
     );
   };
 
+  // _git_commit.js contains the date of the last commit, which updates on every `npm start` or `npm run build`
+  // These lines convert it into a `Month YYYY` format
+  const lastCommitDate = GitCommit.lastCommit.split("Date:")[1];
+  const lastUpdated = new Date(lastCommitDate).toLocaleString('en-AU', { month: 'short', year: 'numeric' })
+
   return (
     <nav>
       { tabs.map(renderTab) }
       <div className='divider web' />
-      <p className='info web'>Built with React and Rails</p>
+      <p className='info web'>Built with React</p>
+      <p className='info web'>Last updated { lastUpdated }</p>
     </nav>
   );
 };

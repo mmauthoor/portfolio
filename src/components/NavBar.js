@@ -39,7 +39,7 @@ const NavBar = () => {
     <nav>
       { tabs.map(renderTab) }
       <div className='divider web' />
-      <p className='info web'>I built this site with <FaReact /> React</p>
+      <p className='info web'>Built with React and Rails</p>
     </nav>
   );
 };

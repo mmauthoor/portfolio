@@ -32,7 +32,7 @@
 /* Web or other */
 @media only screen and (min-width: 761px) {
   a {
-    display: block;
+    display: flex;
     font-size: 1.2rem;
     padding: 1rem;
     text-decoration: none;
@@ -47,6 +47,10 @@
   }
 
   .icon {
-    margin-right: 0.5rem;
+    margin: auto 0.1rem auto 0;
+  }
+
+  .label {
+    padding-left: 0.5rem;
   }
 }

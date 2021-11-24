@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  transition: 0.15s all;
+  transition: all 0.15s;
 }
 
 body {

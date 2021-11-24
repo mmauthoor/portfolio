@@ -9,11 +9,11 @@ import Contact from '../views/Contact';
 export default function Router() {
   return (
     <Routes>
-      <Route path='' element={<Profile />} />
-      <Route path='projects' element={<Projects />} />
-      <Route path='experience' element={<Experience />} />
-      <Route path='education' element={<Education />} />
-      <Route path='contact' element={<Contact />} />
+      <Route path='/' element={<Profile />} />
+      <Route path='/projects' element={<Projects />} />
+      <Route path='/experience' element={<Experience />} />
+      <Route path='/education' element={<Education />} />
+      <Route path='/contact' element={<Contact />} />
     </Routes>
   );
 }

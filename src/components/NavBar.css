@@ -1,10 +1,5 @@
 nav {
   background-color: #161B22;
-  display: flex;
-}
-
-.divider {
-  flex-grow: 1;
 }
 
 /* Mobile */
@@ -12,33 +7,13 @@ nav {
   nav {
     border-top: 2px solid #30363D;
     bottom: 0;
+    display: flex;
     min-width: 100vw;
     position: fixed;
   }
 
-  a {
-    padding: 4vw 0;
-    /* alternatively, instead of width, could use flex-grow: 1, but then width will depend on the text length */
-    width: 18.4vw;
-    text-align: center;
-  }
-
-  a:first-child {
-    padding-left: 4vw;
-    width: 22.4vw;
-  }
-
-  a:nth-child(5) {
-    padding-right: 4vw;
-    width: 22.4vw;
-  }
-
-  .icon {
-    font-size: 6vw;
-  }
-
-  .label {
-    font-size: 3vw;
+  .web {
+    display: none;
   }
 
   .divider, .info {
@@ -55,23 +30,11 @@ nav {
     width: 16rem;
   }
 
-  a {
-    display: block;
-    font-size: 1.2rem;
-    padding: 1rem;
-    text-decoration: none;
+  .mobile {
+    display: none;
   }
 
-  a:hover {
-    color: #9C90E8;
-  }
-
-  .current {
-    background-color: #30363D;
-    font-weight: bold;
-  }
-
-  .icon {
-    margin-right: 0.5rem;
+  .divider {
+    flex-grow: 1;
   }
 }

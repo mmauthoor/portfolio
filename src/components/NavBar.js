@@ -1,46 +1,51 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import {
   FaBriefcase,
   FaCode,
-  FaPhoneAlt,
+  FaPhone,
   FaReact,
   FaRegAddressCard,
   FaUniversity
 } from 'react-icons/fa';
 
+import NavTab from './NavTab';
 import './NavBar.css';
 
-export default function NavBar() {
+const NavBar = () => {
+  // Rather than setting setting '/' as the default activeTab,
+  // the default activeTab is set to whatever is in the url.
+  // This accounts for edge cases where the user first lands on a page.
+  const currentPath =  '/' + window.location.href.split('/')[3];
+  const [ activeTab, setActiveTab ] = useState(currentPath);
+
+  const tabs = [
+    { label: 'Profile', path: '/', icon: <FaRegAddressCard /> },
+    { label: 'Projects', path: '/projects', icon: <FaCode /> },
+    { label: 'Experience', path: '/experience', icon: <FaBriefcase /> },
+    { label: 'Education', path: '/education', icon: <FaUniversity /> },
+    { label: 'Contact', path: '/contact', icon: <FaPhone /> },
+  ];
+
+  const renderTab = (tab) => {
+    return (
+      <NavTab
+        key={ tab.label }
+        label={ tab.label }
+        path={ tab.path }
+        icon={ tab.icon }
+        activeTab={ activeTab }
+        setActiveTab={ setActiveTab }
+      />
+    );
+  };
+
   return (
     <nav>
-      <Link to='/' className='current'>
-        <FaRegAddressCard className='icon' />
-        <p className="label">Profile</p>
-      </Link>
-
-      <Link to='/projects'>
-        <FaCode className='icon' />
-        <p className="label">Projects</p>
-      </Link>
-
-      <Link to='/experience'>
-        <FaBriefcase className='icon' />
-        <p className="label">Experience</p>
-      </Link>
-
-      <Link to='/education'>
-        <FaUniversity className='icon' />
-        <p className="label">Education</p>
-      </Link>
-
-      <Link to='/contact'>
-        <FaPhoneAlt className='icon' />
-        <p className="label">Contact</p>
-      </Link>
-
-      <div className='divider' />
-
-      <p className='info'>I built this site with <FaReact /> React</p>
+      { tabs.map(renderTab) }
+      <div className='divider web' />
+      <p className='info web'>I built this site with <FaReact /> React</p>
     </nav>
   );
-}
+};
+
+export default NavBar;

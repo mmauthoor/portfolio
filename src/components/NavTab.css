@@ -1,0 +1,52 @@
+/* Mobile */
+@media only screen and (max-width: 760px) {
+  a {
+    padding: 4vw 0;
+    width: calc(20%);
+    text-align: center;
+  }
+
+  a:first-child {
+    padding-left: 2vw;
+    width: calc(20% + 2vw);
+  }
+
+  a:nth-child(5) {
+    padding-right: 2vw;
+    width: calc(20% + 2vw);
+  }
+
+  .active {
+    color: #9c90e8;
+  }
+
+  .icon {
+    font-size: 6vw;
+  }
+
+  .label {
+    font-size: 3vw;
+  }
+}
+
+/* Web or other */
+@media only screen and (min-width: 761px) {
+  a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #9C90E8;
+  }
+
+  .active {
+    background-color: #30363D;
+  }
+
+  .icon {
+    margin-right: 0.5rem;
+  }
+}

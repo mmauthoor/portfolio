@@ -36,7 +36,7 @@ const NavBar = () => {
     );
   };
 
-  // _git_commit.js contains the date of the last commit, which updates on every `npm start` or `npm run build`
+  // _git_commit.js contains the date of the last commit, which updates on every `npm run deploy` (see package.json)
   // These lines convert it into a `Month YYYY` format
   const lastCommitDate = GitCommit.lastCommit.split("Date:")[1];
   const lastUpdated = new Date(lastCommitDate).toLocaleString('en-AU', { month: 'short', year: 'numeric' })

@@ -16,7 +16,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "git-info": "echo export default \"{\\\"lastCommit\\\": \\\"$(git log -1 | grep Date:)\\\"}\" > src/_git_commit.js",
+    "git-info": "echo export default \"{\\\"lastUpdated\\\": \\\"$(git log -1 | grep Date:)\\\"}\" > src/_git_commit.js",
     "precommit": "lint-staged",
     "start": "react-scripts start",
     "predeploy": "npm run build",

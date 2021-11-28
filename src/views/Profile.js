@@ -5,10 +5,9 @@ export default function Profile() {
     <main>
       <h1>👋 Hey, I'm Dan.</h1>
 
-      <p>junior software engineer</p>
-      <p>film buff</p>
-      <p>self-proclaimed bánh mì expert</p>
-      <p>linchpin of my mediocre mixed netball team</p>
+      <h3>junior software engineer</h3>
+      <h3>self-proclaimed bánh mì expert</h3>
+      <h3>linchpin of my mediocre mixed netball team</h3>
     </main>
   );
 };

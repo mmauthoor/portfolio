@@ -4,7 +4,7 @@ import Profile from '../views/Profile';
 import Projects from '../views/Projects';
 import Experience from '../views/Experience';
 import Education from '../views/Education';
-import Contact from '../views/Contact';
+import Contact from '../components/Contact';
 
 export default function Router() {
   return (
